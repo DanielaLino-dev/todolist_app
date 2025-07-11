@@ -13,7 +13,7 @@ Este é um app de lista de tarefas simples e funcional feito com Next.js + Tailw
 ### ✅ Adicionando tarefa
 ![Modal de nova tarefa](./public/criar_tarefa.png)
 
-### ✏️ Adicionando tarefa
+### ✏️ Editando tarefa
 ![Modal de nova tarefa](./public/editar_tarefa.png)
 
 ### 🗑️ Excluindo tarefa
