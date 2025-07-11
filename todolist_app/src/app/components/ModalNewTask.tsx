@@ -12,7 +12,11 @@ const ModalNewTask = ({ modalOpen, setModalOpen, children }: ModalProps) => {
 
         <dialog id="my_modal_3" className={`modal ${modalOpen ? "modal-open" : ""}`}>
             <div className="modal-box flex flex-col gap-3.5">
-                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={() => setModalOpen(false)}>✕</button>
+                <button 
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" 
+                onClick={() => setModalOpen(false)}
+                aria-label="Fechar modal"
+                >✕</button>
                 {children}
             </div>
         </dialog>

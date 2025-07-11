@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEventHandler, useState } from 'react';
+import { FormEventHandler, useEffect, useState } from 'react';
 import ModalNewTask from './ModalNewTask';
 import { editToDo } from '@/api/api';
 import { ITask } from '@/types/tasks';
@@ -13,17 +13,33 @@ interface EditTaskModalProps {
 }
 
 const EditTaskModal = ({ task, isOpen, onClose }: EditTaskModalProps) => {
-  const [taskText, setTaskText] = useState(task.task_text);
+  const [taskText, setTaskText] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (isOpen) {
+      setTaskText(task.task_text);
+    }
+  }, [task, isOpen]);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
+
+    if (!taskText.trim()) {
+      alert("O texto da tarefa não pode estar vazio.");
+      return;
+    }
+
     try {
-      await editToDo({ id: task.id, task_text: taskText });
+      setIsLoading(true);
+      await editToDo({ id: task.id, task_text: taskText.trim() });
       router.refresh();
       onClose();
     } catch (error) {
       console.error("Erro ao editar tarefa:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -43,8 +59,12 @@ const EditTaskModal = ({ task, isOpen, onClose }: EditTaskModalProps) => {
             placeholder="Digite uma nova tarefa"
             className="input input-ghost w-full max-w-xs p-0.5"
           />
-          <button type="submit" className="btn btn-soft btn-success">
-            Salvar
+          <button
+            type="submit"
+            className="btn btn-soft btn-success"
+            disabled={isLoading}
+          >
+            {isLoading ? "Salvando..." : "Salvar"}
           </button>
         </div>
       </form>
