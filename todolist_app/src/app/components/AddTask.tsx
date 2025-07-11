@@ -1,3 +1,4 @@
+
 'use client'
 
 import { PiPlusBold } from "react-icons/pi";
@@ -15,7 +16,7 @@ const AddTask = () => {
         async (e) => {
             e.preventDefault();
             await addToDo({
-                id: Date.now.toString(),
+                id: String(Date.now()),
                 task_text: newTaskValue,
             })
             console.log(1);

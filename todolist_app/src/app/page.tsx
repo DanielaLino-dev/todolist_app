@@ -4,7 +4,6 @@ import  TodoList  from "./components/TodoList";
 
 export default async function Home() {
   const tasks = await getAllToDos();
-  console.log(tasks);
   
   return (
     <main className="max-w-4xl mx-auto  mt-6">

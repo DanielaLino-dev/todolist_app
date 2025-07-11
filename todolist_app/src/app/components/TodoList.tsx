@@ -10,12 +10,11 @@ const TodoList = ({ tasks }: TodoListProps) => {
     return (
         <div className="overflow-x-auto">
             <table className="table">
-                {/* head */}
                 <thead>
                     <tr>
                         <th></th>
                         <th>Tarefa</th>
-                        <th>O que preciso fazer</th>
+                        <th>Opções</th>
                     </tr>
                 </thead>
                 <tbody>
