@@ -3,7 +3,24 @@
 
 Uma aplicação simples de lista de tarefas criada com **Next.js**, **TypeScript** e **Tailwind CSS**. Permite adicionar, editar e excluir tarefas de forma rápida e intuitiva.
 
-![Screenshot do App](./imagem_2025-07-11_000315417.png)
+## 💡 Visão Geral
+
+Este é um app de lista de tarefas simples e funcional feito com Next.js + Tailwind.
+
+### 📸 Tela principal
+![Tela principal](./public/tela_inicial.png)
+
+### ✅ Adicionando tarefa
+![Modal de nova tarefa](./public/criar_tarefa.png)
+
+### ✏️ Adicionando tarefa
+![Modal de nova tarefa](./public/editar_tarefa.png)
+
+### 🗑️ Excluindo tarefa
+![Modal de nova tarefa](./public/excluir_tarefa.png)
+
+### ⚠️ Alerta de erro
+![Alerta de erro](./public/alerta_espaço_vazio.png)
 
 ---
 
