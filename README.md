@@ -68,5 +68,5 @@ interface ITask {
 
 ## 👩‍💼 Autora
 
-**Seu Nome**  
+**Daniela Lino**  
 GitHub: [@DanielaLino-dev](https://github.com/DanielaLino-dev)
