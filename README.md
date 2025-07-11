@@ -45,69 +45,6 @@ Este é um app de lista de tarefas simples e funcional feito com Next.js + Tailw
 
 ---
 
-## 🛠️ Como rodar o projeto
-
-1. **Clone o repositório**:
-
-```bash
-git clone https://github.com/DanielaLino-dev/todolist_app.git
-cd todo-list-app
-```
-
-2. **Instale as dependências**:
-
-```bash
-npm install
-```
-
-3. **Inicie o JSON Server**:
-
-> Crie um arquivo `db.json` com o conteúdo:
-
-```json
-{
-  "tasks": []
-}
-```
-
-```bash
-npx json-server --watch db.json --port 3001
-```
-
-4. **Execute o app**:
-
-```bash
-npm run dev
-```
-
-Abra [http://localhost:3000](http://localhost:3000) para visualizar no navegador.
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-.
-├── app/
-│   ├── components/
-│   │   ├── AddTask.tsx
-│   │   ├── TodoList.tsx
-│   │   ├── ModalNewTask.tsx
-│   │   └── EditTaskModal.tsx
-│   └── page.tsx
-├── api/
-│   └── api.ts
-├── types/
-│   └── tasks.d.ts
-├── public/
-├── styles/
-│   └── globals.css
-├── db.json
-└── README.md
-```
-
----
-
 ## 📦 Exemplo de Objeto `Task`
 
 ```ts
@@ -129,7 +66,7 @@ interface ITask {
 
 ---
 
-## 🧑‍💻 Autor
+## 👩‍💼 Autora
 
 **Seu Nome**  
 GitHub: [@DanielaLino-dev](https://github.com/DanielaLino-dev)
